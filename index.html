@@ -1,0 +1,83 @@
+
+
+<html>
+    
+<head>   
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+
+    <style>
+        
+        div{
+            background-color: yellow;
+            padding: 25%;
+            text-align: center;
+        }
+    
+        .text{
+            text-align: center;
+            margin-left: 40%;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    
+    
+    <div id="color_div"></div>
+
+    
+    
+    
+    
+    
+    <script>
+        
+        color_div.onmouseover = hover;
+        color_div.onmouseout = out;
+        color_div.onmousemove  = move;
+        document.body.onmouseover = move_body
+        
+        
+        function move_body()
+        {
+            document.body.style.backgroundColor = "white";
+        }
+
+  
+        function out()
+        {
+            ///innerText вставка на прямую текста 
+            document.getElementById("color_div").innerText = "пока";
+            document.getElementById("color_div").style.backgroundColor = "green";
+            
+        }
+        
+         function move()
+        {
+            document.getElementById("color_div").innerText = "двиг";
+            document.body.style.backgroundColor = "orange";    
+            
+        }
+        
+        //очень быстро сработает!
+      function hover()
+        {
+            document.getElementById("color_div").style.backgroundColor = "red";
+            
+           
+            
+        }
+        
+    </script>
+</body>
+
+</html>
