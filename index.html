@@ -14,15 +14,27 @@
 
     <style>
         
-        div{
-            background-color: yellow;
-            padding: 25%;
-            text-align: center;
+        .first{
+            border: 1px black solid;
+            width: 140px;
+            height: 100px;
+            float: left;
+            padding-left: 7%;
         }
-    
-        .text{
-            text-align: center;
-            margin-left: 40%;
+        
+        .img{
+            height: 100px;
+            width: 140px;            
+        }
+        
+        .my_car{
+           float: right;
+            width: 500px;
+            height: 500px;
+            margin-right: 25%;
+            background-color: aqua;
+            margin-top: 26%;
+            
         }
     </style>
     
@@ -31,52 +43,53 @@
 <body>
 
     
-    
-    <div id="color_div"></div>
+    <div>
+        <div class="first">
+            <img id="car" class="img" src="1.jpg" onclick="car_1()">
 
+        </div>
+
+        <div class="first">
+            <img id="car2" class="img" src="2.jpg" onclick="car_2()">
+        </div>
+
+        <div class="first">
+            <img id="car3" class="img" src="3.jpg" onclick="car_3()">
+        </div>
+
+        <div class="first">
+            <img id="car4" class="img" src="4.jpg" onclick="car_4()">
+        </div>
+    </div>
     
     
+    
+    <div class="my_car">
+          <img id="car5" class="img" src="">
+    </div>
     
     
     
     <script>
         
-        color_div.onmouseover = hover;
-        color_div.onmouseout = out;
-        color_div.onmousemove  = move;
-        document.body.onmouseover = move_body
+        function car_1(){
         
-        
-        function move_body()
-        {
-            document.body.style.backgroundColor = "white";
-        }
-
-  
-        function out()
-        {
-            ///innerText вставка на прямую текста 
-            document.getElementById("color_div").innerText = "пока";
-            document.getElementById("color_div").style.backgroundColor = "green";
-            
         }
         
-         function move()
-        {
-            document.getElementById("color_div").innerText = "двиг";
-            document.body.style.backgroundColor = "orange";    
-            
+        
+        function car_2(){
+        
         }
         
-        //очень быстро сработает!
-      function hover()
-        {
-            document.getElementById("color_div").style.backgroundColor = "red";
-            
-           
-            
+        function car_3(){
+        
         }
         
+        function car_4(){
+            document.getElementById("car5").src = "4.jpg";
+            document.getElementById("car5").style.width = "100%";
+            document.getElementById("car5").style.height = "100%";
+        }
     </script>
 </body>
 
